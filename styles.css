@@ -1,0 +1,421 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('background.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+/* Header Styling */
+header {
+    background-color: #8B4513; 
+    color: white; /* White text for the header */
+    width: 100%; 
+    height: 60px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center the items */
+    padding: 0 20px;
+    box-sizing: border-box; 
+}
+
+/* Logo Styling */
+header .logo {
+    font-size: 1.5em; 
+    font-weight: bold; 
+}
+
+/* Navigation Styling */
+nav {
+    width: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around; /* Distribute the links evenly */
+}
+
+nav ul li {
+    margin-right: 20px; /* Space between each menu item */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* White color for links */
+    font-size: 1.1em; /* Slightly larger font size */
+    padding: 5px 10px; /* Padding around each link */
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #f4a261; /* Light orange background on hover */
+    border-radius: 5px; /* Rounded corners for hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        height: auto; /* Adjust header height for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack the links vertically */
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-bottom: 15px; /* Space between each menu item */
+    }
+}
+
+
+
+/* Home Page Background Section */
+/* Home Page Section Styling */
+.home-section {
+    background-image: url('your-background-image.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Welcome Message Styling */
+.welcome-message {
+    color: white; /* Ensure the text color is white */
+    font-family: 'Arial', sans-serif; /* Optional, for a modern look */
+}
+
+/* Welcome Message Header Styling */
+.welcome-message h2 {
+    color: white; /* Ensure heading color is white */
+    font-size: 4rem; /* Increase font size */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.5s ease-out forwards; /* Apply animation */
+}
+
+/* Welcome Message Paragraph Styling */
+.welcome-message p {
+    color: white; /* Ensure paragraph color is white */
+    font-size: 1.5rem; /* Increase font size */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.5s; /* Adds delay to paragraph */
+}
+
+/* Animation for Fade In and Move Up */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .home-section {
+        height: 80vh; /* Slightly reduce height on smaller screens */
+    }
+
+    .welcome-message h2 {
+        font-size: 2.5rem; /* Adjust heading size on smaller screens */
+    }
+
+    .welcome-message p {
+        font-size: 1.2rem; /* Adjust paragraph size on smaller screens */
+    }
+}
+
+
+
+/* About Us Section Styling */
+.about-us-section {
+    background-color: white; /* White background for About Us section */
+    padding: 50px 20px; /* Add padding for spacing */
+    text-align: center; /* Center the text */
+    color: #333; /* Dark text color for readability */
+}
+
+/* About Us Section Heading */
+.about-us-section h2 {
+    font-size: 36px; /* Larger font size for the heading */
+    color: orange; /* Orange color for the heading */
+    font-family: 'Times New Roman', Times, serif; /* Font style */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* About Us Section Paragraph */
+.about-us-section p {
+    font-size: 18px; /* Font size for the paragraph */
+    color: #6a1b9a; /* Purple color for the text */
+    font-family: 'Times New Roman', Times, serif; /* Font style */
+    line-height: 1.6; /* Increase line height for better readability */
+    max-width: 800px; /* Set a maximum width for the paragraph */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+/* About Cards Container */
+.about-cards-container {
+    display: flex; /* Use Flexbox to arrange cards side by side */
+    justify-content: center; /* Center the cards horizontally */
+    gap: 30px; /* Space between cards */
+    margin-top: 40px; /* Add space above the cards */
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+/* Card Styling */
+.about-card {
+    background-color: #f9f9f9; /* Light background for each card */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    width: 280px; /* Fixed width for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.about-card:hover {
+    transform: translateY(-10px); /* Slightly raise the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Card Heading Styling */
+.about-card h3 {
+    font-size: 24px; /* Font size for the heading inside each card */
+    color: orange; /* Orange color for the heading */
+    font-family: 'Times New Roman', Times, serif; /* Font style */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+/* Card Paragraph Styling */
+.about-card p {
+    font-size: 16px; /* Font size for the paragraph inside each card */
+    color: #333; /* Dark text color */
+    font-family: 'Arial', sans-serif; /* Clean font style for paragraph */
+    line-height: 1.6; /* Increase line height for readability */
+}
+
+
+
+
+
+
+/* Menu Section Styling */
+.menu-section {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Menu Items Container */
+.menu-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+/* Menu Item Styling */
+.menu-item {
+    width: 30%; /* Three items per row */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Menu Item */
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Menu Item Image Styling */
+.menu-item-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Menu Item Info Styling */
+.menu-item-info {
+    padding-top: 15px;
+}
+
+/* Menu Item Name */
+.menu-item-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Menu Item Description */
+.menu-item-info p {
+    color: #555;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Price Styling */
+.price {
+    font-size: 1.2rem;
+    color: #e67e22;
+    font-weight: bold;
+}
+
+/* Order Button Styling */
+.order-button {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Order Button */
+.order-button:hover {
+    background-color: #d35400;
+}
+.menu-section h2 {
+    color: orange;
+    font-size: 36px; /* Increased size */
+    font-family: 'Times New Roman', Times, serif; /* Nice elegant font */
+    text-align: center; /* (Optional) Center align */
+    margin-bottom: 20px; /* (Optional) Add space below heading */
+}
+
+
+
+
+
+
+.order-summary {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #ffffff; /* pure white background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h2 {
+    color: orange;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#order-items {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+#order-items div {
+    margin-bottom: 10px;
+}
+
+.total h3 {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.thank-you-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 22px;
+    color: green;
+    font-weight: bold;
+}
+
+.place-order-button {
+    display: block;
+    margin: 20px auto 10px auto;
+    padding: 12px 24px;
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.place-order-button:hover {
+    background-color: darkorange;
+}
+
+#clear-order-button {
+    display: block;
+    margin: 0 auto;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#clear-order-button:hover {
+    background-color: #e67300;
+}
+
+
+
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: #fff; /* White text */
+    padding: 30px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .info {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: orange; /* Orange color for headings */
+}
+
+footer p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f4f4f4; /* Light gray for text */
+    line-height: 1.5;
+}
+
+footer p br {
+    margin: 5px 0;
+}
+
+/* Optional: Add some spacing between the sections */
+footer .info h2 + p {
+    margin-top: 5px;
+}
+
+
